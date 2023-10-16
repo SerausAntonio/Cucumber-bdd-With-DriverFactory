@@ -1,3 +1,5 @@
+base\BasePage.class
 stepDefinitions\Hook.class
 stepDefinitions\MyStepdefs.class
+factory\DriverFactory.class
 runner\MainRunnerTest.class

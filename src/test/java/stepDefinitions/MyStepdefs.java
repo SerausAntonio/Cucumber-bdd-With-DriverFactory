@@ -14,10 +14,10 @@ public class MyStepdefs {
         driver = DriverFactory.getDriver();
         driver.navigate().to("https://askomdch.com/");
     }
-
     @When("I add a {string} to the Cart")
     public void iAddAToTheCart(String product) {
-        driver.findElement(By.linkText("Blue Shoes")).click();
+        System.out.println(product);
+        driver.findElement(By.linkText(product)).click();
         driver.findElement(By.name("add-to-cart")).click();
     }
     @Then("I see {int} {string}in the Cart")
@@ -28,4 +28,5 @@ public class MyStepdefs {
 
         System.out.println("Amount is " + count + " " + product);
     }
+
 }

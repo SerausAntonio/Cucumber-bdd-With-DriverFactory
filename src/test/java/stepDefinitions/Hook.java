@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 public class Hook {
     WebDriver driver;
 
-    @Before
+    @Before("@regression")
     public void setUp(Scenario scenario){
         driver = DriverFactory.initializeDriver();
         System.out.println(scenario.getName());
@@ -22,7 +22,7 @@ public class Hook {
             System.out.println(scenario.isFailed());
         }
     }
-    @After
+    @After("@regression")
     public void tearDown(Scenario scenario){
         System.out.println("Scenario: "+ scenario.getName() + ", has " + scenario.getStatus());
         driver.quit();
